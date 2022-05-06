@@ -1,12 +1,22 @@
 // DEPENDENCIES
 const express = require('express')
 const app = express()
+const { Sequelize } = require('sequelize')
 
 // CONFIGURATION / MIDDLEWARE
 require('dotenv').config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
+// SEQUELIZE CONNECTION
+const  sequelizer = new Sequelize(process.env.PG_URI)
+
+try {
+    sequelizer.authenticate()
+    console.log(`connected with Sequlize at ${process.env.PG_URI}`)
+} catch(err) {
+    console.log(`Unable to connect because ${err}`)
+}
 // ROOT
 app.get('/', (req, res) => {
     res.status(200).json({
