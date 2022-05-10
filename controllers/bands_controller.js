@@ -33,7 +33,7 @@ router.put('/:id', async (req, res) => {
             message: `Successfully updated ${updatedBands} band(s)`
         })
     } catch(err) {
-        console.log(error)
+        console.log(err)
         res.status(500).json(err)
     }
 })
@@ -51,7 +51,7 @@ router.delete('/:id', async (req, res) => {
             message: `Successfully deleted ${deletedBands} band(s)`
         })
     } catch(err) {
-        console.log(error)
+        console.log(`There was a renderig error ${err}`)
         res.status(500).json(err)
     }
 })
