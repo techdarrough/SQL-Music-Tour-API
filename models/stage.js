@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Stage.init({
     stage_id: {
-      type: DataTypes.INTERGER,
+      type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true  
     },

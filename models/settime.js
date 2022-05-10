@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     set_time_id: {
-      type: DataTypes.INTERGER,
+      type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true  
     }

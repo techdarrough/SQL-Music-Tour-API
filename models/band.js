@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Band.init({
     band_id: {
-        type: DataTypes.INTERGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true  
     } ,
